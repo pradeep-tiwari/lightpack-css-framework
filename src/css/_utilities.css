@@ -894,5 +894,5 @@
 .text-border { color: var(--color-border) !important; }
 .text-border-dark { color: var(--color-border-dark) !important; }
 .text { color: var(--color-text) !important; }
-.text-muted { color: var(--color-muted) !important; }
+.text-muted { color: var(--color-text-muted) !important; }
 .text-inverse { color: var(--color-text-inverse) !important; }
