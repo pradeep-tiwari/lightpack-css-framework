@@ -4,25 +4,25 @@
   All CSS custom properties (variables) for theming and design tokens.
 */
 :root {
-  /* Colors */
-  --red: #ef4444;
-  --red-light: #fca5a5;
-  --red-lighter: #fee2e2;
-  --red-dark: #b91c1c;
-  --pink: #ec4899;
-  --pink-light: #f9a8d4;
+  /* Colors - More muted and professional palette */
+  --red: #dc2626;
+  --red-light: #f87171;
+  --red-lighter: #fef2f2;
+  --red-dark: #991b1b;
+  --pink: #db2777;
+  --pink-light: #f472b6;
   --pink-lighter: #fdf2f8;
-  --pink-dark: #be185d;
-  --orange: #f59e42;
-  --orange-light: #fdba74;
+  --pink-dark: #9f1239;
+  --orange: #ea580c;
+  --orange-light: #fb923c;
   --orange-lighter: #fff7ed;
-  --orange-dark: #b45309;
-  --yellow: #fde047;
-  --yellow-light: #fef9c3;
+  --orange-dark: #c2410c;
+  --yellow: #eab308;
+  --yellow-light: #facc15;
   --yellow-lighter: #fefce8;
   --yellow-dark: #a16207;
-  --green: #22c55e;
-  --green-light: #86efac;
+  --green: #16a34a;
+  --green-light: #4ade80;
   --green-lighter: #f0fdf4;
   --green-dark: #15803d;
   --teal: #14b8a6;
