@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Customization - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="p-4">
+        <header class="mb-5">
+            <h1 class="mt-0 mb-2">Theme Customization Guide</h1>
+            <p class="text-muted">Learn how to customize Lightpack CSS to match your brand and create custom themes.</p>
+        </header>
+        
+        <!-- Overview -->
+        <section class="mb-5">
+            <h2>Overview</h2>
+            <p>Lightpack CSS uses CSS custom properties (variables) for theming, making it incredibly easy to customize colors, typography, spacing, and more. The framework includes built-in light and dark themes that automatically adapt based on the <code>.theme-dark</code> class.</p>
+        </section>
+        
+        <!-- How Theming Works -->
+        <section class="mb-5">
+            <h2>How Theming Works</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="mt-0">CSS Variables Architecture</h3>
+                    <p>All design tokens are defined in <code>src/css/_variables.css</code> using CSS custom properties:</p>
+                    <pre><code>:root {
+  /* Base colors */
+  --white: #ffffff;
+  --black: #0a0a0a;
+  
+  /* Semantic colors */
+  --color-background: var(--white);
+  --color-text: var(--black);
+  --color-primary: var(--black);
+  
+  /* Typography */
+  --font-family: system-ui, -apple-system, ...;
+  --fs-base: 1rem;
+  --fw-normal: 400;
+}</code></pre>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="mt-0">Dark Theme Override</h3>
+                    <p>Dark theme is activated by adding <code>.theme-dark</code> class to the body:</p>
+                    <pre><code>.theme-dark {
+  --color-background: #0a0a0a;
+  --color-text: #f5f5f5;
+  --color-primary: #ffffff;
+  --color-surface: #1a1a1a;
+  /* ... more overrides */
+}</code></pre>
+                    <button class="btn btn-primary mt-2" onclick="document.body.classList.toggle('theme-dark')">
+                        Toggle Dark Theme
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Customization Methods -->
+        <section class="mb-5">
+            <h2>Customization Methods</h2>
+            
+            <h3>Method 1: Override CSS Variables (Recommended)</h3>
+            <div class="card mb-3 bg-muted">
+                <div class="card-body">
+                    <p class="fw-bold">Add custom CSS after loading Lightpack:</p>
+                    <pre><code>&lt;link rel="stylesheet" href="lightpack.css"&gt;
+&lt;style&gt;
+  :root {
+    /* Override primary color */
+    --color-primary: #3b82f6;
+    --color-primary-light: #60a5fa;
+    --color-primary-dark: #2563eb;
+    
+    /* Override typography */
+    --font-family: 'Inter', sans-serif;
+    --fs-base: 1.125rem;
+  }
+  
+  .theme-dark {
+    --color-primary: #60a5fa;
+    --color-background: #111827;
+  }
+&lt;/style&gt;</code></pre>
+                </div>
+            </div>
+            
+            <h3>Method 2: Fork and Modify Source</h3>
+            <div class="card mb-3 bg-muted">
+                <div class="card-body">
+                    <p class="fw-bold">Edit <code>src/css/_variables.css</code> directly:</p>
+                    <ol>
+                        <li>Clone the repository</li>
+                        <li>Modify variables in <code>src/css/_variables.css</code></li>
+                        <li>Run <code>npm run build</code></li>
+                        <li>Use your custom build</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <h3>Method 3: CSS Class Overrides</h3>
+            <div class="card mb-3 bg-muted">
+                <div class="card-body">
+                    <p class="fw-bold">Create custom theme classes:</p>
+                    <pre><code>.theme-ocean {
+  --color-primary: #0ea5e9;
+  --color-success: #10b981;
+  --color-background: #f0f9ff;
+}
+
+.theme-sunset {
+  --color-primary: #f97316;
+  --color-background: #fff7ed;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Customizable Variables -->
+        <section class="mb-5">
+            <h2>Customizable Variables</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">Colors</div>
+                        <div class="card-body">
+                            <ul class="list-none pl-0 fs-sm">
+                                <li class="mb-1"><code>--color-primary</code></li>
+                                <li class="mb-1"><code>--color-success</code></li>
+                                <li class="mb-1"><code>--color-danger</code></li>
+                                <li class="mb-1"><code>--color-warning</code></li>
+                                <li class="mb-1"><code>--color-info</code></li>
+                                <li class="mb-1"><code>--color-background</code></li>
+                                <li class="mb-1"><code>--color-text</code></li>
+                                <li class="mb-1"><code>--color-surface</code></li>
+                                <li class="mb-1"><code>--color-border</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">Typography</div>
+                        <div class="card-body">
+                            <ul class="list-none pl-0 fs-sm">
+                                <li class="mb-1"><code>--font-family-sans</code></li>
+                                <li class="mb-1"><code>--font-family-serif</code></li>
+                                <li class="mb-1"><code>--font-family-mono</code></li>
+                                <li class="mb-1"><code>--fs-xs</code> to <code>--fs-5xl</code></li>
+                                <li class="mb-1"><code>--fw-thin</code> to <code>--fw-black</code></li>
+                                <li class="mb-1"><code>--line-height-tight</code></li>
+                                <li class="mb-1"><code>--letter-spacing-wide</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">Spacing</div>
+                        <div class="card-body">
+                            <ul class="list-none pl-0 fs-sm">
+                                <li class="mb-1"><code>--g-1</code> (0.25rem)</li>
+                                <li class="mb-1"><code>--g-2</code> (0.5rem)</li>
+                                <li class="mb-1"><code>--g-3</code> (1rem)</li>
+                                <li class="mb-1"><code>--g-4</code> (1.5rem)</li>
+                                <li class="mb-1"><code>--g-5</code> (2rem)</li>
+                                <li class="mb-1"><code>--g-6</code> to <code>--g-9</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">Effects</div>
+                        <div class="card-body">
+                            <ul class="list-none pl-0 fs-sm">
+                                <li class="mb-1"><code>--radius-sm/md/lg</code></li>
+                                <li class="mb-1"><code>--shadow-sm/md/lg</code></li>
+                                <li class="mb-1"><code>--transition-fast/base/slow</code></li>
+                                <li class="mb-1"><code>--easing-base</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Example Themes -->
+        <section class="mb-5">
+            <h2>Pre-built Theme Examples</h2>
+            <p class="text-muted mb-3">Explore these ready-to-use theme variations:</p>
+            
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mt-0">Ocean Theme</h3>
+                            <p class="text-muted">Cool blue tones with aqua accents</p>
+                            <a href="theme-ocean.html" class="btn btn-primary btn-sm">View Theme</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mt-0">Forest Theme</h3>
+                            <p class="text-muted">Natural greens with earthy tones</p>
+                            <a href="theme-forest.html" class="btn btn-primary btn-sm">View Theme</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mt-0">Sunset Theme</h3>
+                            <p class="text-muted">Warm oranges and vibrant reds</p>
+                            <a href="theme-sunset.html" class="btn btn-primary btn-sm">View Theme</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mt-0">Purple Theme</h3>
+                            <p class="text-muted">Royal purples with pink accents</p>
+                            <a href="theme-purple.html" class="btn btn-primary btn-sm">View Theme</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mt-0">Monochrome Theme</h3>
+                            <p class="text-muted">Elegant grayscale with contrast</p>
+                            <a href="theme-monochrome.html" class="btn btn-primary btn-sm">View Theme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Best Practices -->
+        <section class="mb-5">
+            <h2>Best Practices</h2>
+            <div class="alert alert-info">
+                <ul class="mb-0">
+                    <li>Always test both light and dark themes</li>
+                    <li>Maintain sufficient color contrast for accessibility (WCAG AA: 4.5:1)</li>
+                    <li>Use semantic color names (primary, success, danger) instead of specific colors</li>
+                    <li>Test your theme with all components</li>
+                    <li>Keep font sizes relative (rem/em) for better scalability</li>
+                    <li>Document your custom variables for team collaboration</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="mt-5 pt-4 border-top">
+            <a href="index.html" class="btn btn-secondary">← Back to Overview</a>
+            <button class="btn btn-primary ml-2" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Theme - Lightpack CSS</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+    <style>
+        :root {
+            --color-primary: #9333ea;
+            --color-primary-light: #a855f7;
+            --color-primary-lighter: #c084fc;
+            --color-primary-dark: #7e22ce;
+            --color-success: #10b981;
+            --color-danger: #dc2626;
+            --color-warning: #f59e0b;
+            --color-info: #8b5cf6;
+            --color-background: #faf5ff;
+            --color-surface: #f3e8ff;
+            --color-surface-alt: #e9d5ff;
+            --color-muted: #ede9fe;
+            --color-border: #e9d5ff;
+        }
+        .theme-dark {
+            --color-primary: #a855f7;
+            --color-primary-light: #c084fc;
+            --color-background: #1a0f2e;
+            --color-surface: #2d1b4e;
+            --color-surface-alt: #4c2f7a;
+            --color-muted: #251840;
+            --color-border: #4c2f7a;
+            --color-text: #f3e8ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-4">
+        <header class="mb-4">
+            <h1 class="mt-0">Purple Theme</h1>
+            <p class="text-muted">Royal purples with pink accents</p>
+            <button class="btn btn-primary" onclick="document.body.classList.toggle('theme-dark')">Toggle Dark Mode</button>
+        </header>
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h4 class="mt-0">Buttons</h4>
+            <button class="btn btn-primary mb-2">Primary</button>
+            <button class="btn btn-info mb-2">Info</button></div></div></div>
+            <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h4 class="mt-0">Badges</h4>
+            <span class="badge badge-primary">Purple</span>
+            <span class="badge badge-info">Violet</span></div></div></div>
+            <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h4 class="mt-0">Progress</h4>
+            <div class="progress"><div class="progress-bar" style="width: 65%"></div></div></div></div></div>
+        </div>
+        <div class="card mb-4"><div class="card-header">Theme Variables</div><div class="card-body">
+        <pre><code>:root { --color-primary: #9333ea; --color-background: #faf5ff; }
+.theme-dark { --color-primary: #a855f7; --color-background: #1a0f2e; }</code></pre></div></div>
+        <a href="themes.html" class="btn btn-secondary">← Back to Themes</a>
+    </div>
+</body>
+</html>

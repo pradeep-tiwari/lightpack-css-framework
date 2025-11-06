@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Theme - Lightpack CSS</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+    <style>
+        :root {
+            --color-primary: #16a34a;
+            --color-primary-light: #22c55e;
+            --color-primary-lighter: #4ade80;
+            --color-primary-dark: #15803d;
+            --color-success: #10b981;
+            --color-danger: #dc2626;
+            --color-warning: #f59e0b;
+            --color-info: #06b6d4;
+            --color-background: #f0fdf4;
+            --color-surface: #dcfce7;
+            --color-surface-alt: #bbf7d0;
+            --color-muted: #d1fae5;
+            --color-border: #bbf7d0;
+        }
+        .theme-dark {
+            --color-primary: #4ade80;
+            --color-primary-light: #86efac;
+            --color-background: #0f1e13;
+            --color-surface: #1a3a1f;
+            --color-surface-alt: #2d5a3a;
+            --color-muted: #1a2f1f;
+            --color-border: #2d5a3a;
+            --color-text: #dcfce7;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-4">
+        <header class="mb-4">
+            <h1 class="mt-0">Forest Theme</h1>
+            <p class="text-muted">Natural greens with earthy tones</p>
+            <button class="btn btn-primary" onclick="document.body.classList.toggle('theme-dark')">Toggle Dark Mode</button>
+        </header>
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h4 class="mt-0">Buttons</h4>
+            <button class="btn btn-primary mb-2">Primary</button>
+            <button class="btn btn-success mb-2">Success</button></div></div></div>
+            <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h4 class="mt-0">Badges</h4>
+            <span class="badge badge-primary">Forest</span>
+            <span class="badge badge-success">Green</span></div></div></div>
+            <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h4 class="mt-0">Progress</h4>
+            <div class="progress"><div class="progress-bar" style="width: 70%"></div></div></div></div></div>
+        </div>
+        <div class="card mb-4"><div class="card-header">Theme Variables</div><div class="card-body">
+        <pre><code>:root { --color-primary: #16a34a; --color-background: #f0fdf4; }
+.theme-dark { --color-primary: #4ade80; --color-background: #0f1e13; }</code></pre></div></div>
+        <a href="themes.html" class="btn btn-secondary">← Back to Themes</a>
+    </div>
+</body>
+</html>

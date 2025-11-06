@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Theme - Lightpack CSS</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+    <style>
+        /* Ocean Theme - Cool blues with aqua accents */
+        :root {
+            --color-primary: #0ea5e9;
+            --color-primary-light: #38bdf8;
+            --color-primary-lighter: #7dd3fc;
+            --color-primary-dark: #0284c7;
+            
+            --color-success: #14b8a6;
+            --color-success-light: #2dd4bf;
+            --color-success-lighter: #5eead4;
+            --color-success-dark: #0f766e;
+            
+            --color-danger: #f43f5e;
+            --color-warning: #f59e0b;
+            --color-info: #06b6d4;
+            
+            --color-background: #f0f9ff;
+            --color-surface: #e0f2fe;
+            --color-surface-alt: #bae6fd;
+            --color-muted: #dbeafe;
+            --color-border: #bae6fd;
+        }
+        
+        .theme-dark {
+            --color-primary: #38bdf8;
+            --color-primary-light: #7dd3fc;
+            --color-primary-dark: #0ea5e9;
+            
+            --color-background: #0c1821;
+            --color-surface: #1e3a4f;
+            --color-surface-alt: #2d4f66;
+            --color-muted: #1a2f3f;
+            --color-border: #2d4f66;
+            --color-text: #e0f2fe;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-4">
+        <header class="mb-4">
+            <h1 class="mt-0">Ocean Theme</h1>
+            <p class="text-muted">Cool blue tones inspired by the sea</p>
+            <button class="btn btn-primary" onclick="document.body.classList.toggle('theme-dark')">Toggle Dark Mode</button>
+        </header>
+        
+        <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="avatar avatar-lg bg-primary text-white mb-2">O</div>
+                        <h3 class="mt-0">Ocean</h3>
+                        <p class="text-muted fs-sm">Primary Color</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mt-0">Buttons</h4>
+                        <button class="btn btn-primary btn-sm mb-2">Primary</button>
+                        <button class="btn btn-success btn-sm mb-2">Success</button>
+                        <button class="btn btn-danger btn-sm mb-2">Danger</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mt-0">Badges</h4>
+                        <span class="badge badge-primary mb-2">Ocean</span>
+                        <span class="badge badge-success mb-2">Teal</span>
+                        <span class="badge badge-info mb-2">Aqua</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mt-0">Alerts</h4>
+                        <div class="alert alert-info fs-sm">Ocean vibes!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">Theme Variables</div>
+            <div class="card-body">
+                <pre><code>:root {
+  --color-primary: #0ea5e9;
+  --color-success: #14b8a6;
+  --color-background: #f0f9ff;
+  --color-surface: #e0f2fe;
+}
+
+.theme-dark {
+  --color-primary: #38bdf8;
+  --color-background: #0c1821;
+  --color-surface: #1e3a4f;
+}</code></pre>
+            </div>
+        </div>
+        
+        <a href="themes.html" class="btn btn-secondary">← Back to Themes</a>
+    </div>
+</body>
+</html>
