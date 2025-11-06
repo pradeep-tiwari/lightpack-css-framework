@@ -1,7 +1,149 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Toast - Lightpack</title><link rel="stylesheet" href="../dist/lightpack.css"><script src="../dist/lightpack.js"></script></head>
-<body><div class="p-4"><h1>Toast Notifications</h1><p class="text-muted mb-4">Temporary notification messages.</p>
-<button class="btn btn-success mb-2" onclick="alert('Toast notification would appear here')">Show Success Toast</button><br>
-<button class="btn btn-danger mb-2" onclick="alert('Error toast would appear here')">Show Error Toast</button><br>
-<button class="btn btn-warning mb-2" onclick="alert('Warning toast would appear here')">Show Warning Toast</button>
-<div class="mt-4"><button class="btn btn-secondary" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button></div></div></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notifications - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="toast.html" class="text-gray fw-500 fs-sm">Toast</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="Lightpack.toggleTheme()">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Toast Notifications</h1>
+                    <p class="text-muted">Temporary notification messages that appear and auto-dismiss.</p>
+                </header>
+                
+                <section class="mb-5">
+                    <h2>Toast Variants</h2>
+                    <p class="text-muted mb-3">Click buttons to show toast notifications in different positions.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <button class="btn btn-success" onclick="showSuccessToast()">Success Toast</button>
+                        <button class="btn btn-danger" onclick="showDangerToast()">Error Toast</button>
+                        <button class="btn btn-warning" onclick="showWarningToast()">Warning Toast</button>
+                        <button class="btn btn-info" onclick="showInfoToast()">Info Toast</button>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Toast Positions</h2>
+                    <p class="text-muted mb-3">Toasts can appear in four corner positions.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <button class="btn btn-secondary" onclick="showToastPosition('bottom-right')">Bottom Right</button>
+                        <button class="btn btn-secondary" onclick="showToastPosition('bottom-left')">Bottom Left</button>
+                        <button class="btn btn-secondary" onclick="showToastPosition('top-right')">Top Right</button>
+                        <button class="btn btn-secondary" onclick="showToastPosition('top-left')">Top Left</button>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Sticky Toast</h2>
+                    <p class="text-muted mb-3">Toasts that don't auto-dismiss (must be closed manually).</p>
+                    <button class="btn btn-primary" onclick="showStickyToast()">Show Sticky Toast</button>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>JavaScript API</h2>
+                    <div class="card bg-muted">
+                        <div class="card-body">
+                            <pre><code>// Show a toast notification
+Lightpack.showToast({
+  message: 'Your message here',
+  type: 'success',        // 'success', 'danger', 'warning', 'info'
+  position: 'bottom-right', // 'bottom-right', 'bottom-left', 'top-right', 'top-left'
+  sticky: false            // true = doesn't auto-dismiss
+});
+
+// Remove a specific toast
+Lightpack.removeToast(toastId, position);</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Auto-dismisses after 5 seconds (unless sticky)</li>
+                        <li>Manual close button on each toast</li>
+                        <li>Four corner positions</li>
+                        <li>Multiple toasts stack vertically</li>
+                        <li>Smooth fade-in animation</li>
+                        <li>Accessible with ARIA attributes</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Initialize Lightpack
+        Lightpack.init();
+        
+        // Toast examples
+        function showSuccessToast() {
+            Lightpack.showToast({
+                message: 'Operation completed successfully!',
+                type: 'success',
+                position: 'bottom-right'
+            });
+        }
+        
+        function showDangerToast() {
+            Lightpack.showToast({
+                message: 'An error occurred. Please try again.',
+                type: 'danger',
+                position: 'bottom-right'
+            });
+        }
+        
+        function showWarningToast() {
+            Lightpack.showToast({
+                message: 'Warning: Your session will expire soon.',
+                type: 'warning',
+                position: 'bottom-right'
+            });
+        }
+        
+        function showInfoToast() {
+            Lightpack.showToast({
+                message: 'New features have been added to your dashboard.',
+                type: 'info',
+                position: 'bottom-right'
+            });
+        }
+        
+        function showToastPosition(position) {
+            Lightpack.showToast({
+                message: `Toast notification at ${position}`,
+                type: 'info',
+                position: position
+            });
+        }
+        
+        function showStickyToast() {
+            Lightpack.showToast({
+                message: 'This toast won\'t auto-dismiss. Click × to close.',
+                type: 'info',
+                position: 'top-right',
+                sticky: true
+            });
+        }
+    </script>
+</body>
+</html>
