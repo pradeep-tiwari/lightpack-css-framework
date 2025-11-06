@@ -32,25 +32,29 @@
 .btn-primary:focus {
   background: var(--color-primary-dark);
   color: var(--color-text-inverse);
+  border-color: var(--color-primary-dark);
+  opacity: 0.9;
 }
 .btn-primary:active {
   background: var(--color-primary-light);
+  opacity: 1;
 }
 
 /* Secondary */
 .btn-secondary {
-  background: var(--color-secondary-light);
-  color: var(--color-secondary-dark);
-  border-color: var(--color-secondary-light);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
 }
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background: var(--color-secondary);
-  color: var(--color-text-inverse);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  border-color: var(--color-border-dark);
 }
 .btn-secondary:active {
-  background: var(--color-secondary-dark);
-  color: var(--color-text-inverse);
+  background: var(--color-muted);
+  color: var(--color-text);
 }
 
 /* Success */
@@ -203,23 +207,29 @@
 }
 
 .btn-primary.btn-ghost {
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 .btn-primary.btn-ghost:hover,
-.btn-primary.btn-ghost:focus,
+.btn-primary.btn-ghost:focus {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
 .btn-primary.btn-ghost:active {
-  background: var(--color-primary-light);
-  color: var(--color-primary);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
 }
 
 .btn-secondary.btn-ghost {
-  color: var(--color-secondary);
+  color: var(--color-text-muted);
 }
 .btn-secondary.btn-ghost:hover,
-.btn-secondary.btn-ghost:focus,
+.btn-secondary.btn-ghost:focus {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
 .btn-secondary.btn-ghost:active {
-  background: var(--color-secondary-light);
-  color: var(--color-secondary);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
 }
 
 .btn-success.btn-ghost {

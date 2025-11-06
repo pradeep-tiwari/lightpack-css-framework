@@ -37,7 +37,7 @@ p {
 }
 
 a {
-  color: var(--blue);
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -47,7 +47,7 @@ a:not([class]) {
 }
 
 a:hover {
-  color: var(--blue-dark);
+  color: var(--color-primary-dark);
 }
 
 hr {
