@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="cards.html" class="text-gray fw-500 fs-sm">Cards</a></li>
+                <li class="mb-2"><a href="alerts.html" class="text-gray fs-sm">Alerts</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Cards</h1>
+                    <p class="text-muted">Flexible content containers with multiple variants.</p>
+                </header>
+                
+                <!-- Basic Card -->
+                <section class="mb-5">
+                    <h2>Basic Card</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="mt-0">Card Title</h3>
+                                    <p>This is a basic card with some text content.</p>
+                                    <button class="btn btn-primary btn-sm">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="mt-0">Another Card</h3>
+                                    <p>Cards are great for organizing content into sections.</p>
+                                    <button class="btn btn-secondary btn-sm">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="mt-0">Third Card</h3>
+                                    <p>Use cards to create beautiful layouts quickly.</p>
+                                    <button class="btn btn-success btn-sm">Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Card with Header -->
+                <section class="mb-5">
+                    <h2>Card with Header</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="mt-0 mb-0">Featured Product</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>This card has a header section for titles or navigation.</p>
+                            <div class="flex gap-2">
+                                <button class="btn btn-primary btn-sm">Buy Now</button>
+                                <button class="btn btn-secondary btn-outline btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Card with Footer -->
+                <section class="mb-5">
+                    <h2>Card with Footer</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mt-0">Subscription Plan</h3>
+                            <p class="fs-2xl fw-700 mb-0">$29<span class="fs-sm fw-400 text-muted">/month</span></p>
+                            <ul class="list-disc pl-4 mb-3">
+                                <li>Unlimited projects</li>
+                                <li>24/7 support</li>
+                                <li>Advanced analytics</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-full">Subscribe Now</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Pricing Cards -->
+                <section class="mb-5">
+                    <h2>Pricing Cards</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h3 class="mt-0">Free</h3>
+                                    <p class="fs-3xl fw-700 mb-0">$0</p>
+                                    <p class="text-muted mb-3">per month</p>
+                                    <ul class="list-none pl-0 mb-4 text-left">
+                                        <li class="mb-2">✓ 5 projects</li>
+                                        <li class="mb-2">✓ Basic support</li>
+                                        <li class="mb-2">✓ 1 GB storage</li>
+                                    </ul>
+                                    <button class="btn btn-secondary btn-outline w-full">Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card border-primary">
+                                <div class="card-body text-center">
+                                    <span class="badge badge-primary mb-2">Popular</span>
+                                    <h3 class="mt-0">Pro</h3>
+                                    <p class="fs-3xl fw-700 mb-0">$29</p>
+                                    <p class="text-muted mb-3">per month</p>
+                                    <ul class="list-none pl-0 mb-4 text-left">
+                                        <li class="mb-2">✓ Unlimited projects</li>
+                                        <li class="mb-2">✓ Priority support</li>
+                                        <li class="mb-2">✓ 100 GB storage</li>
+                                    </ul>
+                                    <button class="btn btn-primary w-full">Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h3 class="mt-0">Enterprise</h3>
+                                    <p class="fs-3xl fw-700 mb-0">$99</p>
+                                    <p class="text-muted mb-3">per month</p>
+                                    <ul class="list-none pl-0 mb-4 text-left">
+                                        <li class="mb-2">✓ Everything in Pro</li>
+                                        <li class="mb-2">✓ Dedicated support</li>
+                                        <li class="mb-2">✓ Unlimited storage</li>
+                                    </ul>
+                                    <button class="btn btn-secondary btn-outline w-full">Contact Sales</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Profile Cards -->
+                <section class="mb-5">
+                    <h2>Profile Cards</h2>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <span class="avatar avatar-lg mb-3"><img src="https://randomuser.me/api/portraits/men/32.jpg" /></span>
+                                    <h4 class="mt-0 mb-1">John Doe</h4>
+                                    <p class="text-muted fs-sm mb-3">Software Engineer</p>
+                                    <button class="btn btn-primary btn-sm w-full">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <span class="avatar avatar-lg mb-3"><img src="https://randomuser.me/api/portraits/women/44.jpg" /></span>
+                                    <h4 class="mt-0 mb-1">Jane Smith</h4>
+                                    <p class="text-muted fs-sm mb-3">Product Designer</p>
+                                    <button class="btn btn-primary btn-sm w-full">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <span class="avatar avatar-lg mb-3"><img src="https://randomuser.me/api/portraits/men/45.jpg" /></span>
+                                    <h4 class="mt-0 mb-1">Bob Johnson</h4>
+                                    <p class="text-muted fs-sm mb-3">Marketing Manager</p>
+                                    <button class="btn btn-primary btn-sm w-full">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <span class="avatar avatar-lg mb-3"><img src="https://randomuser.me/api/portraits/women/45.jpg" /></span>
+                                    <h4 class="mt-0 mb-1">Alice Brown</h4>
+                                    <p class="text-muted fs-sm mb-3">Data Scientist</p>
+                                    <button class="btn btn-primary btn-sm w-full">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Stats Cards -->
+                <section class="mb-5">
+                    <h2>Stats Cards</h2>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <p class="text-muted fs-sm mb-1">Total Users</p>
+                                            <p class="fs-2xl fw-700 mb-0">2,543</p>
+                                        </div>
+                                        <span class="badge badge-success">+12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <p class="text-muted fs-sm mb-1">Revenue</p>
+                                            <p class="fs-2xl fw-700 mb-0">$45.2K</p>
+                                        </div>
+                                        <span class="badge badge-success">+8%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <p class="text-muted fs-sm mb-1">Orders</p>
+                                            <p class="fs-2xl fw-700 mb-0">1,234</p>
+                                        </div>
+                                        <span class="badge badge-danger">-3%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <p class="text-muted fs-sm mb-1">Conversion</p>
+                                            <p class="fs-2xl fw-700 mb-0">3.2%</p>
+                                        </div>
+                                        <span class="badge badge-success">+0.5%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

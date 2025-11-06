@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="flex items-center gap-2 pt-2 pb-2 text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="buttons.html" class="flex items-center gap-2 pt-2 pb-2 text-gray fs-sm">Buttons</a></li>
+                <li class="mb-2"><a href="badges.html" class="flex items-center gap-2 pt-2 pb-2 text-gray fs-sm">Badges</a></li>
+                <li class="mb-2"><a href="forms.html" class="flex items-center gap-2 pt-2 pb-2 text-gray fs-sm">Forms</a></li>
+                <li class="mb-2"><a href="tables.html" class="flex items-center gap-2 pt-2 pb-2 text-gray fw-500 fs-sm">Tables</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Tables</h1>
+                    <p class="text-muted">Responsive table components with various styles and states.</p>
+                </header>
+                
+                <!-- Basic Table -->
+                <section class="mb-5">
+                    <h2>Basic Table</h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>john@example.com</td>
+                                    <td>Admin</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td>jane@example.com</td>
+                                    <td>Editor</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bob Johnson</td>
+                                    <td>bob@example.com</td>
+                                    <td>Viewer</td>
+                                    <td><span class="badge badge-warning">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Bordered Table -->
+                <section class="mb-5">
+                    <h2>Bordered Table</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Laptop</td>
+                                    <td>$999</td>
+                                    <td>15</td>
+                                    <td>Electronics</td>
+                                </tr>
+                                <tr>
+                                    <td>Mouse</td>
+                                    <td>$29</td>
+                                    <td>150</td>
+                                    <td>Accessories</td>
+                                </tr>
+                                <tr>
+                                    <td>Keyboard</td>
+                                    <td>$79</td>
+                                    <td>45</td>
+                                    <td>Accessories</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Hoverable Table -->
+                <section class="mb-5">
+                    <h2>Hoverable Table</h2>
+                    <p class="text-muted mb-3">Hover over rows to see the effect.</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1001</td>
+                                    <td>Alice Brown</td>
+                                    <td>$250.00</td>
+                                    <td>2024-01-15</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#1002</td>
+                                    <td>Charlie Davis</td>
+                                    <td>$180.50</td>
+                                    <td>2024-01-16</td>
+                                    <td><span class="badge badge-warning">Processing</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#1003</td>
+                                    <td>Diana Evans</td>
+                                    <td>$420.00</td>
+                                    <td>2024-01-17</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#1004</td>
+                                    <td>Frank Miller</td>
+                                    <td>$95.00</td>
+                                    <td>2024-01-18</td>
+                                    <td><span class="badge badge-danger">Cancelled</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Table with Actions -->
+                <section class="mb-5">
+                    <h2>Table with Actions</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover fs-sm">
+                            <thead>
+                                <tr>
+                                    <th class="w-36"><input type="checkbox"></th>
+                                    <th>Member</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="flex items-center gap-2">
+                                            <span class="avatar avatar-sm"><img src="https://randomuser.me/api/portraits/men/32.jpg" /></span>
+                                            <span class="fw-500">John Doe</span>
+                                        </div>
+                                    </td>
+                                    <td>john@example.com</td>
+                                    <td><span class="badge badge-danger">Owner</span></td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td class="text-center whitespace-nowrap">
+                                        <button class="btn btn-secondary btn-ghost btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-ghost btn-sm" disabled>Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="flex items-center gap-2">
+                                            <span class="avatar avatar-sm"><img src="https://randomuser.me/api/portraits/women/44.jpg" /></span>
+                                            <span class="fw-500">Jane Smith</span>
+                                        </div>
+                                    </td>
+                                    <td>jane@example.com</td>
+                                    <td><span class="badge badge-primary">Admin</span></td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td class="text-center whitespace-nowrap">
+                                        <button class="btn btn-secondary btn-ghost btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-ghost btn-sm">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <div class="flex items-center gap-2">
+                                            <span class="avatar avatar-sm"><img src="https://randomuser.me/api/portraits/men/45.jpg" /></span>
+                                            <span class="fw-500">Bob Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td>bob@example.com</td>
+                                    <td><span class="badge badge-secondary">Editor</span></td>
+                                    <td><span class="badge badge-warning">Pending</span></td>
+                                    <td class="text-center whitespace-nowrap">
+                                        <button class="btn btn-secondary btn-ghost btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-ghost btn-sm">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Compact Table -->
+                <section class="mb-5">
+                    <h2>Compact Table (Small Font)</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered fs-sm">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Task</th>
+                                    <th>Assignee</th>
+                                    <th>Priority</th>
+                                    <th>Due Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Update documentation</td>
+                                    <td>John Doe</td>
+                                    <td><span class="badge badge-danger">High</span></td>
+                                    <td>2024-01-20</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Fix login bug</td>
+                                    <td>Jane Smith</td>
+                                    <td><span class="badge badge-danger">High</span></td>
+                                    <td>2024-01-21</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Add new feature</td>
+                                    <td>Bob Johnson</td>
+                                    <td><span class="badge badge-warning">Medium</span></td>
+                                    <td>2024-01-25</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Code review</td>
+                                    <td>Alice Brown</td>
+                                    <td><span class="badge badge-info">Low</span></td>
+                                    <td>2024-01-30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Responsive Table -->
+                <section class="mb-5">
+                    <h2>Responsive Table</h2>
+                    <p class="text-muted mb-3">This table scrolls horizontally on small screens.</p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Company</th>
+                                    <th>Position</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>john@example.com</td>
+                                    <td>+1 234 567 8900</td>
+                                    <td>Acme Corp</td>
+                                    <td>CEO</td>
+                                    <td>New York, USA</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td>jane@example.com</td>
+                                    <td>+1 234 567 8901</td>
+                                    <td>Tech Inc</td>
+                                    <td>CTO</td>
+                                    <td>San Francisco, USA</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
