@@ -524,6 +524,8 @@
 .fw-500 { font-weight: var(--fw-500) !important; }
 .fw-600 { font-weight: var(--fw-600) !important; }
 .fw-700 { font-weight: var(--fw-700) !important; }
+.fw-800 { font-weight: var(--fw-800) !important; }
+.fw-900 { font-weight: var(--fw-900) !important; }
 
 /* Text Alignment */
 .text-left { text-align: left !important; }
