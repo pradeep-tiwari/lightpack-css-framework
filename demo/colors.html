@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="colors.html" class="text-gray fw-500 fs-sm">Colors</a></li>
+                <li class="mb-2"><a href="typography.html" class="text-gray fs-sm">Typography</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Colors</h1>
+                    <p class="text-muted">Color palette and utility classes for backgrounds, text, and borders.</p>
+                </header>
+                
+                <section class="mb-5">
+                    <h2>Semantic Colors</h2>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body">
+                                    <h4 class="mt-0">Primary</h4>
+                                    <p class="fs-sm mb-0">bg-primary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-success text-white">
+                                <div class="card-body">
+                                    <h4 class="mt-0">Success</h4>
+                                    <p class="fs-sm mb-0">bg-success</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body">
+                                    <h4 class="mt-0">Danger</h4>
+                                    <p class="fs-sm mb-0">bg-danger</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-warning text-white">
+                                <div class="card-body">
+                                    <h4 class="mt-0">Warning</h4>
+                                    <p class="fs-sm mb-0">bg-warning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Text Colors</h2>
+                    <div class="mb-3">
+                        <p class="text-primary">This is primary text (.text-primary)</p>
+                        <p class="text-success">This is success text (.text-success)</p>
+                        <p class="text-danger">This is danger text (.text-danger)</p>
+                        <p class="text-warning">This is warning text (.text-warning)</p>
+                        <p class="text-info">This is info text (.text-info)</p>
+                        <p class="text-muted">This is muted text (.text-muted)</p>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Background Colors</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3 bg-surface border">bg-surface</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3 bg-muted border">bg-muted</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3 bg-primary text-white">bg-primary</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Border Colors</h2>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border border-primary">border-primary</div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border border-success">border-success</div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border border-danger">border-danger</div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border border-warning">border-warning</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdowns - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="dropdowns.html" class="text-gray fw-500 fs-sm">Dropdowns</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Dropdowns</h1>
+                    <p class="text-muted">Toggleable contextual menus for displaying lists of links.</p>
+                </header>
+                
+                <section class="mb-5">
+                    <h2>Basic Dropdown</h2>
+                    <div class="dropdown">
+                        <button class="btn btn-primary">Actions ▾</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Duplicate</a>
+                            <a class="dropdown-item" href="#">Archive</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>User Menu Dropdown</h2>
+                    <div class="dropdown">
+                        <div class="flex items-center gap-2 cursor-pointer">
+                            <span class="avatar avatar-sm"><img src="https://randomuser.me/api/portraits/men/32.jpg" /></span>
+                            <span>John Doe</span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Billing</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Logout</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Dropdown Variants</h2>
+                    <div class="flex gap-3 flex-wrap">
+                        <div class="dropdown">
+                            <button class="btn btn-primary">Primary ▾</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-secondary">Secondary ▾</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-success">Success ▾</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Usage Note</h2>
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> Dropdowns require JavaScript to toggle visibility. The framework includes built-in dropdown functionality that activates on click.
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

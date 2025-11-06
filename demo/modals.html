@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="modals.html" class="text-gray fw-500 fs-sm">Modals</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Modals</h1>
+                    <p class="text-muted">Dialog boxes and overlays for focused content.</p>
+                </header>
+                
+                <section class="mb-5">
+                    <h2>Basic Modal</h2>
+                    <button class="btn btn-primary" onclick="Lightpack.openModal('modal1')">Open Modal</button>
+                    
+                    <div id="modal1" class="modal">
+                        <div class="modal-backdrop" onclick="Lightpack.closeModal('modal1')"></div>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="mt-0 mb-0">Modal Title</h3>
+                                    <button class="btn btn-ghost btn-sm" onclick="Lightpack.closeModal('modal1')">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This is a basic modal dialog. It overlays the main content and focuses user attention.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" onclick="Lightpack.closeModal('modal1')">Cancel</button>
+                                    <button class="btn btn-primary" onclick="Lightpack.closeModal('modal1')">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Confirmation Modal</h2>
+                    <button class="btn btn-danger" onclick="Lightpack.openModal('modal2')">Delete Account</button>
+                    
+                    <div id="modal2" class="modal">
+                        <div class="modal-backdrop" onclick="Lightpack.closeModal('modal2')"></div>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="mt-0 mb-0">Confirm Deletion</h3>
+                                    <button class="btn btn-ghost btn-sm" onclick="Lightpack.closeModal('modal2')">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" onclick="Lightpack.closeModal('modal2')">Cancel</button>
+                                    <button class="btn btn-danger" onclick="Lightpack.closeModal('modal2')">Yes, Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Usage</h2>
+                    <div class="card bg-muted">
+                        <div class="card-body">
+                            <code class="fs-sm">
+// Open modal<br>
+Lightpack.openModal('modalId');<br><br>
+// Close modal<br>
+Lightpack.closeModal('modalId');
+                            </code>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

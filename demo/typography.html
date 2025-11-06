@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="typography.html" class="text-gray fw-500 fs-sm">Typography</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Typography</h1>
+                    <p class="text-muted">Typography scale, headings, and text utilities.</p>
+                </header>
+                
+                <section class="mb-5">
+                    <h2>Headings</h2>
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Font Sizes</h2>
+                    <p class="fs-xs">Extra small text (.fs-xs)</p>
+                    <p class="fs-sm">Small text (.fs-sm)</p>
+                    <p class="fs-base">Base text (.fs-base)</p>
+                    <p class="fs-lg">Large text (.fs-lg)</p>
+                    <p class="fs-xl">Extra large text (.fs-xl)</p>
+                    <p class="fs-2xl">2X large text (.fs-2xl)</p>
+                    <p class="fs-3xl">3X large text (.fs-3xl)</p>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Font Weights</h2>
+                    <p class="fw-300">Light weight (.fw-300)</p>
+                    <p class="fw-400">Normal weight (.fw-400)</p>
+                    <p class="fw-500">Medium weight (.fw-500)</p>
+                    <p class="fw-700">Bold weight (.fw-700)</p>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Text Alignment</h2>
+                    <p class="text-left">Left aligned text (.text-left)</p>
+                    <p class="text-center">Center aligned text (.text-center)</p>
+                    <p class="text-right">Right aligned text (.text-right)</p>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Text Transform</h2>
+                    <p class="uppercase">Uppercase text (.uppercase)</p>
+                    <p class="lowercase">LOWERCASE TEXT (.lowercase)</p>
+                    <p class="capitalize">capitalized text (.capitalize)</p>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
