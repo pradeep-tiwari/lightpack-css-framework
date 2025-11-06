@@ -1,7 +1,131 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Stepper - Lightpack</title><link rel="stylesheet" href="../dist/lightpack.css"></head>
-<body><div class="p-4"><h1>Stepper</h1><p class="text-muted mb-4">Multi-step process indicator.</p>
-<div class="stepper mb-4"><div class="step active"><div class="step-number">1</div><div class="step-title">Account</div></div>
-<div class="step"><div class="step-number">2</div><div class="step-title">Profile</div></div>
-<div class="step"><div class="step-number">3</div><div class="step-title">Complete</div></div></div>
-<button class="btn btn-secondary" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button></div></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepper - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="stepper.html" class="text-gray fw-500 fs-sm">Stepper</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="Lightpack.toggleTheme()">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Stepper</h1>
+                    <p class="text-muted">Multi-step process indicator for forms and workflows.</p>
+                </header>
+                
+                <section class="mb-5">
+                    <h2>Basic Stepper</h2>
+                    <p class="text-muted mb-3">Visual indicator for multi-step processes.</p>
+                    <div class="stepper">
+                        <div class="step step-active">
+                            <div class="step-circle">1</div>
+                            <div class="step-label">Start</div>
+                        </div>
+                        
+                        <div class="step-line"></div>
+                        
+                        <div class="step">
+                            <div class="step-circle">2</div>
+                            <div class="step-label">Middle</div>
+                        </div>
+                        
+                        <div class="step-line"></div>
+                        
+                        <div class="step">
+                            <div class="step-circle">3</div>
+                            <div class="step-label">End</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>Completed Steps</h2>
+                    <p class="text-muted mb-3">Show progress with completed and active states.</p>
+                    <div class="stepper">
+                        <div class="step step-completed">
+                            <div class="step-circle">✓</div>
+                            <div class="step-label">Account</div>
+                        </div>
+                        
+                        <div class="step-line"></div>
+                        
+                        <div class="step step-active">
+                            <div class="step-circle">2</div>
+                            <div class="step-label">Profile</div>
+                        </div>
+                        
+                        <div class="step-line"></div>
+                        
+                        <div class="step">
+                            <div class="step-circle">3</div>
+                            <div class="step-label">Complete</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>HTML Structure</h2>
+                    <div class="card bg-muted">
+                        <div class="card-body">
+                            <pre><code>&lt;div class="stepper"&gt;
+  &lt;div class="step step-active"&gt;
+    &lt;div class="step-circle"&gt;1&lt;/div&gt;
+    &lt;div class="step-label"&gt;Start&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="step-line"&gt;&lt;/div&gt;
+
+  &lt;div class="step"&gt;
+    &lt;div class="step-circle"&gt;2&lt;/div&gt;
+    &lt;div class="step-label"&gt;Middle&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="step-line"&gt;&lt;/div&gt;
+
+  &lt;div class="step"&gt;
+    &lt;div class="step-circle"&gt;3&lt;/div&gt;
+    &lt;div class="step-label"&gt;End&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>CSS Classes</h2>
+                    <ul>
+                        <li><code>.stepper</code> - Container for steps</li>
+                        <li><code>.step</code> - Individual step</li>
+                        <li><code>.step-active</code> - Current active step</li>
+                        <li><code>.step-completed</code> - Completed step (use ✓ in circle)</li>
+                        <li><code>.step-circle</code> - Circle with number/icon</li>
+                        <li><code>.step-label</code> - Step label text</li>
+                        <li><code>.step-line</code> - Connecting line between steps</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        Lightpack.init();
+    </script>
+</body>
+</html>

@@ -32,67 +32,100 @@
                 
                 <section class="mb-5">
                     <h2>Basic Modal</h2>
-                    <button class="btn btn-primary" onclick="Lightpack.openModal('modal1')">Open Modal</button>
-                    
-                    <div id="modal1" class="modal">
-                        <div class="modal-backdrop" onclick="Lightpack.closeModal('modal1')"></div>
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="mt-0 mb-0">Modal Title</h3>
-                                    <button class="btn btn-ghost btn-sm" onclick="Lightpack.closeModal('modal1')">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>This is a basic modal dialog. It overlays the main content and focuses user attention.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" onclick="Lightpack.closeModal('modal1')">Cancel</button>
-                                    <button class="btn btn-primary" onclick="Lightpack.closeModal('modal1')">Save Changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="text-muted mb-3">Click the button to open a modal dialog.</p>
+                    <button class="btn btn-primary" data-modal-open="show-modal">Show Modal</button>
                 </section>
                 
                 <section class="mb-5">
                     <h2>Confirmation Modal</h2>
-                    <button class="btn btn-danger" onclick="Lightpack.openModal('modal2')">Delete Account</button>
-                    
-                    <div id="modal2" class="modal">
-                        <div class="modal-backdrop" onclick="Lightpack.closeModal('modal2')"></div>
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="mt-0 mb-0">Confirm Deletion</h3>
-                                    <button class="btn btn-ghost btn-sm" onclick="Lightpack.closeModal('modal2')">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Are you sure you want to delete your account? This action cannot be undone.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" onclick="Lightpack.closeModal('modal2')">Cancel</button>
-                                    <button class="btn btn-danger" onclick="Lightpack.closeModal('modal2')">Yes, Delete</button>
-                                </div>
-                            </div>
+                    <p class="text-muted mb-3">Modal with destructive action confirmation.</p>
+                    <button class="btn btn-danger" data-modal-open="delete-modal">Delete Account</button>
+                </section>
+                
+                <section class="mb-5">
+                    <h2>HTML Structure</h2>
+                    <div class="card bg-muted">
+                        <div class="card-body">
+                            <pre><code>&lt;!-- Trigger Button --&gt;
+&lt;button data-modal-open="show-modal"&gt;Show Modal&lt;/button&gt;
+
+&lt;!-- Modal Structure --&gt;
+&lt;div class="modal-backdrop" data-modal="show-modal" style="display:none;"&gt;
+  &lt;div class="modal max-w-md"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3 class="modal-title"&gt;Demo Modal Title&lt;/h3&gt;
+      &lt;button class="modal-close" data-modal-close&gt;×&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;You can open and close multiple modals independently.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-secondary" data-modal-cancel&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
                 
                 <section class="mb-5">
-                    <h2>Usage</h2>
+                    <h2>JavaScript API</h2>
                     <div class="card bg-muted">
                         <div class="card-body">
-                            <code class="fs-sm">
-// Open modal<br>
-Lightpack.openModal('modalId');<br><br>
-// Close modal<br>
-Lightpack.closeModal('modalId');
-                            </code>
+                            <pre><code>// Initialize modals (auto-runs on page load)
+Lightpack.initModals();
+
+// Trigger attributes:
+// data-modal-open="modalId"  - Opens modal
+// data-modal-close           - Closes modal
+// data-modal-cancel          - Closes modal
+// .modal-close               - Closes modal</code></pre>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
     </div>
+    
+    <!-- Modal 1: Basic Modal -->
+    <div class="modal-backdrop" data-modal="show-modal" style="display:none;">
+        <div class="modal max-w-md">
+            <div class="modal-header">
+                <h3 class="modal-title">Welcome to Lightpack</h3>
+                <button class="modal-close" data-modal-close>×</button>
+            </div>
+            <div class="modal-body">
+                <p>This is a basic modal dialog. It overlays the main content and focuses user attention on important information or actions.</p>
+                <p class="mb-0">Click outside the modal, press Escape, or use the close button to dismiss.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-modal-cancel>Cancel</button>
+                <button class="btn btn-primary" data-modal-close>Got it!</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2: Confirmation Modal -->
+    <div class="modal-backdrop" data-modal="delete-modal" style="display:none;">
+        <div class="modal max-w-md">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirm Deletion</h3>
+                <button class="modal-close" data-modal-close>×</button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">Are you sure you want to delete your account? This action cannot be undone and all your data will be permanently removed.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-modal-cancel>Cancel</button>
+                <button class="btn btn-danger" data-modal-close>Yes, Delete</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize all Lightpack components
+        Lightpack.init();
+    </script>
 </body>
 </html>
