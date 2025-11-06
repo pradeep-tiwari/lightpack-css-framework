@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+</head>
+<body>
+    <div class="p-4">
+        <h1 class="mt-0 mb-2">Spinners</h1>
+        <p class="text-muted mb-4">Loading indicators for async operations.</p>
+        
+        <h2>Basic Spinner</h2>
+        <div class="spinner mb-5"></div>
+        
+        <h2>Spinner Sizes</h2>
+        <div class="flex gap-3 items-center mb-5">
+            <div class="spinner spinner-sm"></div>
+            <div class="spinner"></div>
+            <div class="spinner spinner-lg"></div>
+        </div>
+        
+        <h2>Colored Spinners</h2>
+        <div class="flex gap-3 items-center mb-5">
+            <div class="spinner text-primary"></div>
+            <div class="spinner text-success"></div>
+            <div class="spinner text-danger"></div>
+            <div class="spinner text-warning"></div>
+        </div>
+        
+        <h2>Loading Button</h2>
+        <button class="btn btn-primary" disabled>
+            <div class="spinner spinner-sm mr-2"></div>
+            Loading...
+        </button>
+        
+        <div class="mt-4">
+            <button class="btn btn-secondary" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+        </div>
+    </div>
+</body>
+</html>

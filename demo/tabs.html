@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="p-4">
+        <header class="mb-4">
+            <h1 class="mt-0 mb-2">Tabs Component</h1>
+            <p class="text-muted">Organize content into tabbed interfaces.</p>
+        </header>
+        
+        <section class="mb-5">
+            <h2>Basic Tabs</h2>
+            <div class="tabs">
+                <div class="tabs-nav">
+                    <button class="tab-link active" onclick="Lightpack.showTab('tab1', this)">Tab 1</button>
+                    <button class="tab-link" onclick="Lightpack.showTab('tab2', this)">Tab 2</button>
+                    <button class="tab-link" onclick="Lightpack.showTab('tab3', this)">Tab 3</button>
+                </div>
+                <div class="tabs-content">
+                    <div id="tab1" class="tab-pane active">
+                        <h3>Tab 1 Content</h3>
+                        <p>This is the content for the first tab.</p>
+                    </div>
+                    <div id="tab2" class="tab-pane">
+                        <h3>Tab 2 Content</h3>
+                        <p>This is the content for the second tab.</p>
+                    </div>
+                    <div id="tab3" class="tab-pane">
+                        <h3>Tab 3 Content</h3>
+                        <p>This is the content for the third tab.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-5">
+            <h2>Settings Tabs Example</h2>
+            <div class="tabs">
+                <div class="tabs-nav">
+                    <button class="tab-link active" onclick="Lightpack.showTab('profile', this)">Profile</button>
+                    <button class="tab-link" onclick="Lightpack.showTab('account', this)">Account</button>
+                    <button class="tab-link" onclick="Lightpack.showTab('security', this)">Security</button>
+                </div>
+                <div class="tabs-content">
+                    <div id="profile" class="tab-pane active">
+                        <h3>Profile Settings</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Display Name</label>
+                            <input type="text" class="form-control" value="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Bio</label>
+                            <textarea class="form-control" rows="3">Software developer</textarea>
+                        </div>
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                    <div id="account" class="tab-pane">
+                        <h3>Account Settings</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" value="john@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" value="johndoe">
+                        </div>
+                        <button class="btn btn-primary">Update Account</button>
+                    </div>
+                    <div id="security" class="tab-pane">
+                        <h3>Security Settings</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Current Password</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">New Password</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <button class="btn btn-primary">Change Password</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <button class="btn btn-secondary" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+    </div>
+</body>
+</html>

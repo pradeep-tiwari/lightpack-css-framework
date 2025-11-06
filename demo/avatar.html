@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+</head>
+<body>
+    <div class="p-4">
+        <h1 class="mt-0 mb-2">Avatar Component</h1>
+        <p class="text-muted mb-4">User profile images and placeholders.</p>
+        
+        <h2>Avatar Sizes</h2>
+        <div class="flex gap-3 items-center mb-5">
+            <span class="avatar avatar-sm"><img src="https://randomuser.me/api/portraits/men/32.jpg" /></span>
+            <span class="avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" /></span>
+            <span class="avatar avatar-lg"><img src="https://randomuser.me/api/portraits/men/32.jpg" /></span>
+        </div>
+        
+        <h2>Avatar Shapes</h2>
+        <div class="flex gap-3 items-center mb-5">
+            <span class="avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" /></span>
+            <span class="avatar avatar-square"><img src="https://randomuser.me/api/portraits/women/44.jpg" /></span>
+        </div>
+        
+        <h2>Avatar with Initials</h2>
+        <div class="flex gap-3 items-center mb-5">
+            <span class="avatar bg-primary text-white fw-700">JD</span>
+            <span class="avatar bg-success text-white fw-700">AB</span>
+            <span class="avatar bg-danger text-white fw-700">XY</span>
+        </div>
+        
+        <h2>Avatar Group</h2>
+        <div class="flex mb-5" style="margin-left: -0.5rem;">
+            <span class="avatar" style="margin-left: -0.5rem;"><img src="https://randomuser.me/api/portraits/men/32.jpg" /></span>
+            <span class="avatar" style="margin-left: -0.5rem;"><img src="https://randomuser.me/api/portraits/women/44.jpg" /></span>
+            <span class="avatar" style="margin-left: -0.5rem;"><img src="https://randomuser.me/api/portraits/men/45.jpg" /></span>
+            <span class="avatar bg-muted" style="margin-left: -0.5rem;">+5</span>
+        </div>
+        
+        <button class="btn btn-secondary" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button>
+    </div>
+</body>
+</html>

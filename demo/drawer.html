@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Drawer - Lightpack</title><link rel="stylesheet" href="../dist/lightpack.css"><script src="../dist/lightpack.js"></script></head>
+<body><div class="p-4"><h1>Drawer</h1><p class="text-muted mb-4">Slide-out navigation panel.</p>
+<button class="btn btn-primary" onclick="Lightpack.openDrawer('drawer1')">Open Drawer</button>
+<div id="drawer1" class="drawer"><div class="drawer-backdrop" onclick="Lightpack.closeDrawer('drawer1')"></div>
+<div class="drawer-content"><h3>Drawer Title</h3><p>Drawer content goes here.</p>
+<button class="btn btn-secondary" onclick="Lightpack.closeDrawer('drawer1')">Close</button></div></div>
+<button class="btn btn-secondary mt-4" onclick="document.body.classList.toggle('theme-dark')">Toggle Theme</button></div></body></html>
