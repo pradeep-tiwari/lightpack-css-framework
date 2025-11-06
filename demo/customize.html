@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization Guide - Lightpack CSS Framework</title>
+    <link rel="stylesheet" href="../dist/lightpack.css">
+    <script src="../dist/lightpack.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <aside class="p-4 pl-5 sidebar bg-surface">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="avatar avatar-sm avatar-square bg-primary text-white fw-700">L</span>
+                <span class="fs-md fw-500">Lightpack</span>
+            </div>
+            <ul class="list-none pt-2 pb-0 pl-0 pr-0">
+                <li class="mb-2"><a href="index.html" class="text-gray fs-sm">Overview</a></li>
+                <li class="mb-2"><a href="customize.html" class="text-gray fw-500 fs-sm">Customization</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top">
+                <button class="btn btn-secondary btn-sm w-full" onclick="Lightpack.toggleTheme()">Toggle Theme</button>
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="p-4">
+                <header class="mb-4">
+                    <h1 class="mt-0 mb-2">Customization Guide</h1>
+                    <p class="text-muted">Learn how to customize fonts, colors, and themes in Lightpack CSS.</p>
+                </header>
+                
+                <!-- Font Family -->
+                <section class="mb-5">
+                    <h2>1. Custom Font Family</h2>
+                    <p class="text-muted mb-3">Change the default font to match your brand.</p>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Using Google Fonts</h3>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;!-- 1. Load Google Font --&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"&gt;
+  
+  &lt;!-- 2. Load Lightpack CSS --&gt;
+  &lt;link rel="stylesheet" href="lightpack.css"&gt;
+  
+  &lt;!-- 3. Override font variable --&gt;
+  &lt;style&gt;
+    :root {
+      --font-family: 'Inter', system-ui, sans-serif;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Your app content --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Popular Font Combinations</h3>
+                            <pre><code>&lt;!-- Modern & Clean --&gt;
+:root {
+  --font-family: 'Inter', system-ui, sans-serif;
+}
+
+&lt;!-- Professional --&gt;
+:root {
+  --font-family: 'Roboto', system-ui, sans-serif;
+}
+
+&lt;!-- Elegant --&gt;
+:root {
+  --font-family: 'Poppins', system-ui, sans-serif;
+}
+
+&lt;!-- Geometric --&gt;
+:root {
+  --font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+&lt;!-- Tech/Startup --&gt;
+:root {
+  --font-family: 'DM Sans', system-ui, sans-serif;
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <div class="alert-content">
+                            <div class="alert-title">💡 Pro Tip</div>
+                            <div>Always include fallback fonts like <code>system-ui</code> and <code>sans-serif</code> for better performance and compatibility.</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Font Sizes -->
+                <section class="mb-5">
+                    <h2>2. Custom Font Sizes</h2>
+                    <p class="text-muted mb-3">Adjust typography scale to match your design.</p>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Method 1: Scale Everything (Recommended)</h3>
+                            <pre><code>&lt;style&gt;
+  &lt;!-- Change base size - all rem units scale automatically --&gt;
+  html {
+    font-size: 18px;  /* Default is 16px */
+  }
+&lt;/style&gt;
+
+&lt;!-- Result: --&gt;
+&lt;!-- 1rem = 18px (instead of 16px) --&gt;
+&lt;!-- 1.5rem = 27px (instead of 24px) --&gt;
+&lt;!-- Everything scales proportionally! --&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Method 2: Override Specific Sizes</h3>
+                            <pre><code>&lt;style&gt;
+  :root {
+    /* Override individual font sizes */
+    --fs-xs: 0.875rem;    /* 14px */
+    --fs-sm: 1rem;        /* 16px */
+    --fs-base: 1.125rem;  /* 18px - Body text */
+    --fs-md: 1.25rem;     /* 20px */
+    --fs-lg: 1.5rem;      /* 24px */
+    --fs-xl: 1.75rem;     /* 28px */
+    --fs-2xl: 2rem;       /* 32px */
+    --fs-3xl: 2.5rem;     /* 40px */
+    --fs-4xl: 3rem;       /* 48px */
+    --fs-5xl: 3.75rem;    /* 60px */
+  }
+&lt;/style&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Method 3: Change Body Text Only</h3>
+                            <pre><code>&lt;style&gt;
+  :root {
+    --fs-base: 1.125rem;  /* 18px body text */
+  }
+&lt;/style&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-success">
+                        <div class="alert-content">
+                            <div class="alert-title">✅ Best Practice</div>
+                            <div>Use Method 1 (scale HTML font-size) for consistent proportions across your entire app.</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Theming -->
+                <section class="mb-5">
+                    <h2>3. Custom Color Theme</h2>
+                    <p class="text-muted mb-3">Create your own color scheme by overriding CSS variables.</p>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Basic Theme Override</h3>
+                            <pre><code>&lt;style&gt;
+  :root {
+    /* Primary color (buttons, links, accents) */
+    --color-primary: #4f46e5;
+    --color-primary-light: #6366f1;
+    --color-primary-dark: #4338ca;
+    
+    /* Status colors */
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+  }
+&lt;/style&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Complete Brand Theme Example</h3>
+                            <pre><code>&lt;style&gt;
+  :root {
+    /* Brand Colors */
+    --color-primary: #6366f1;        /* Indigo */
+    --color-primary-light: #818cf8;
+    --color-primary-dark: #4f46e5;
+    
+    /* Background Colors */
+    --color-background: #f9fafb;     /* Light gray */
+    --color-surface: #ffffff;        /* White */
+    --color-border: #e5e7eb;         /* Subtle border */
+    
+    /* Text Colors */
+    --color-text: #111827;           /* Dark gray */
+    --color-text-muted: #6b7280;     /* Medium gray */
+  }
+  
+  /* Dark Theme Override */
+  .theme-dark {
+    --color-primary: #818cf8;        /* Lighter indigo for dark mode */
+    --color-background: #0f172a;     /* Dark blue */
+    --color-surface: #1e293b;        /* Slate */
+    --color-border: rgba(255,255,255,0.1);
+    --color-text: #f1f5f9;           /* Light text */
+    --color-text-muted: #94a3b8;     /* Muted light */
+  }
+&lt;/style&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Pre-made Theme Examples</h3>
+                            <p class="mb-2">Check out our theme demos for inspiration:</p>
+                            <ul class="mb-0">
+                                <li><a href="themes.html" class="text-primary">View Theme Gallery</a> - 5 ready-to-use themes</li>
+                                <li>Ocean, Forest, Sunset, Purple, Monochrome</li>
+                                <li>Copy and paste the CSS to use them</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Dark Mode -->
+                <section class="mb-5">
+                    <h2>4. Dark Mode Setup</h2>
+                    <p class="text-muted mb-3">Enable dark mode toggle in your app.</p>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Toggle Dark Mode</h3>
+                            <pre><code>&lt;!-- Add toggle button --&gt;
+&lt;button onclick="Lightpack.toggleTheme()"&gt;
+  Toggle Dark Mode
+&lt;/button&gt;
+
+&lt;!-- Or manually toggle --&gt;
+&lt;button onclick="document.body.classList.toggle('theme-dark')"&gt;
+  Toggle Dark Mode
+&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Default to Dark Mode</h3>
+                            <pre><code>&lt;!-- Add class to body tag --&gt;
+&lt;body class="theme-dark"&gt;
+  &lt;!-- Your content --&gt;
+&lt;/body&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-muted mb-3">
+                        <div class="card-body">
+                            <h3 class="fs-base fw-600 mb-2">Auto-detect System Preference</h3>
+                            <pre><code>&lt;script&gt;
+  // Detect system dark mode preference
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('theme-dark');
+  }
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Complete Example -->
+                <section class="mb-5">
+                    <h2>5. Complete Customization Example</h2>
+                    <p class="text-muted mb-3">Putting it all together - custom font, sizes, and colors.</p>
+                    
+                    <div class="card bg-muted">
+                        <div class="card-body">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Custom App&lt;/title&gt;
+  
+  &lt;!-- 1. Load Custom Font --&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"&gt;
+  
+  &lt;!-- 2. Load Lightpack CSS --&gt;
+  &lt;link rel="stylesheet" href="lightpack.css"&gt;
+  
+  &lt;!-- 3. Custom Overrides --&gt;
+  &lt;style&gt;
+    /* Scale everything proportionally */
+    html {
+      font-size: 18px;
+    }
+    
+    /* Custom font and colors */
+    :root {
+      /* Font */
+      --font-family: 'Inter', system-ui, sans-serif;
+      
+      /* Brand Colors */
+      --color-primary: #6366f1;
+      --color-primary-light: #818cf8;
+      --color-primary-dark: #4f46e5;
+      
+      /* Backgrounds */
+      --color-background: #f9fafb;
+      --color-surface: #ffffff;
+    }
+    
+    /* Dark Theme */
+    .theme-dark {
+      --color-primary: #818cf8;
+      --color-background: #0f172a;
+      --color-surface: #1e293b;
+    }
+  &lt;/style&gt;
+  
+  &lt;!-- 4. Load Lightpack JS --&gt;
+  &lt;script src="lightpack.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Your app content --&gt;
+  &lt;button class="btn btn-primary" onclick="Lightpack.toggleTheme()"&gt;
+    Toggle Dark Mode
+  &lt;/button&gt;
+  
+  &lt;script&gt;
+    // Initialize Lightpack
+    Lightpack.init();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Quick Reference -->
+                <section class="mb-5">
+                    <h2>6. Quick Reference</h2>
+                    <p class="text-muted mb-3">Common customization variables at a glance.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="fs-base fw-600 mb-2">Typography</h3>
+                                    <ul class="fs-sm mb-0">
+                                        <li><code>--font-family</code></li>
+                                        <li><code>--fs-base</code> - Body text</li>
+                                        <li><code>--fs-sm</code> - Small text</li>
+                                        <li><code>--fs-lg</code> - Large text</li>
+                                        <li><code>--fw-400</code> to <code>--fw-900</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="fs-base fw-600 mb-2">Colors</h3>
+                                    <ul class="fs-sm mb-0">
+                                        <li><code>--color-primary</code></li>
+                                        <li><code>--color-success</code></li>
+                                        <li><code>--color-danger</code></li>
+                                        <li><code>--color-warning</code></li>
+                                        <li><code>--color-background</code></li>
+                                        <li><code>--color-text</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="fs-base fw-600 mb-2">Spacing</h3>
+                                    <ul class="fs-sm mb-0">
+                                        <li><code>--g-1</code> to <code>--g-9</code></li>
+                                        <li><code>--radius-sm</code></li>
+                                        <li><code>--radius-md</code></li>
+                                        <li><code>--radius-lg</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="fs-base fw-600 mb-2">Effects</h3>
+                                    <ul class="fs-sm mb-0">
+                                        <li><code>--shadow-sm</code></li>
+                                        <li><code>--shadow-md</code></li>
+                                        <li><code>--shadow-lg</code></li>
+                                        <li><code>--transition-fast</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Resources -->
+                <section class="mb-5">
+                    <h2>7. Additional Resources</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li><a href="themes.html" class="text-primary">Theme Gallery</a> - Pre-made color themes</li>
+                                <li><a href="typography.html" class="text-primary">Typography</a> - Font utilities and classes</li>
+                                <li><a href="colors.html" class="text-primary">Colors</a> - Color palette and utilities</li>
+                                <li><a href="index.html" class="text-primary">Components</a> - All UI components</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        Lightpack.init();
+    </script>
+</body>
+</html>
