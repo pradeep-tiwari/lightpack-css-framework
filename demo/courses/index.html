@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Online Learning Platform</title>
+    <link rel="stylesheet" href="../../dist/lightpack.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-2">
+        <div class="container-lg mx-auto px-4">
+            <div class="flex items-center justify-between fs-sm">
+                <span>🎓 New: Get 50% off on all courses this week!</span>
+                <div class="flex gap-4">
+                    <a href="#" class="text-white">Teach on LearnHub</a>
+                    <a href="#" class="text-white">Business</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar bg-surface border-bottom sticky">
+        <div class="container-lg mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <div class="navbar-brand">
+                    <a href="#" class="fs-2xl fw-700 text-primary">LearnHub</a>
+                </div>
+                <div class="flex items-center gap-5 d-none d-block-md">
+                    <div class="dropdown">
+                        <button class="btn btn-ghost">Categories</button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item">Web Development</button>
+                            <button class="dropdown-item">Data Science</button>
+                            <button class="dropdown-item">Design</button>
+                            <button class="dropdown-item">Business</button>
+                        </div>
+                    </div>
+                    <div class="input-group flex-1">
+                        <input type="search" placeholder="Search for courses...">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="btn btn-ghost btn-sm d-none d-block-md">My Learning</button>
+                    <button class="btn btn-ghost btn-sm">🔔</button>
+                    <button class="btn btn-outline btn-sm">Log In</button>
+                    <button class="btn btn-primary btn-sm">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-surface py-9">
+        <div class="container-lg mx-auto px-4">
+            <div class="row items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="fs-5xl fw-700 mb-4">Learn Without Limits</h1>
+                    <p class="fs-lg text-muted mb-5">
+                        Start, switch, or advance your career with thousands of courses, 
+                        Professional Certificates, and degrees from world-class universities and companies.
+                    </p>
+                    <div class="flex gap-3 mb-5">
+                        <button class="btn btn-primary btn-lg">Explore Courses</button>
+                        <button class="btn btn-outline btn-lg">For Business</button>
+                    </div>
+                    <div class="flex items-center gap-4 fs-sm text-muted">
+                        <div>
+                            <div class="fs-2xl fw-700 text-primary">50K+</div>
+                            <div>Active Students</div>
+                        </div>
+                        <div>
+                            <div class="fs-2xl fw-700 text-primary">5K+</div>
+                            <div>Courses</div>
+                        </div>
+                        <div>
+                            <div class="fs-2xl fw-700 text-primary">200+</div>
+                            <div>Instructors</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mt-5 mt-md-0">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" 
+                         alt="Students learning" 
+                         class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-8">
+        <div class="container-lg mx-auto px-4">
+            <h2 class="fs-3xl fw-700 mb-5">Top Categories</h2>
+            <div class="grid grid-cols-3 grid-cols-md-4 grid-cols-lg-6 gap-4">
+                <a href="#" class="card text-center p-4">
+                    <div class="fs-4xl mb-2">💻</div>
+                    <h3 class="fw-600 fs-base mb-1">Development</h3>
+                    <p class="fs-sm text-muted mb-0">1,234 courses</p>
+                </a>
+                <a href="#" class="card text-center p-4">
+                    <div class="fs-4xl mb-2">🎨</div>
+                    <h3 class="fw-600 fs-base mb-1">Design</h3>
+                    <p class="fs-sm text-muted mb-0">856 courses</p>
+                </a>
+                <a href="#" class="card text-center p-4">
+                    <div class="fs-4xl mb-2">📊</div>
+                    <h3 class="fw-600 fs-base mb-1">Business</h3>
+                    <p class="fs-sm text-muted mb-0">678 courses</p>
+                </a>
+                <a href="#" class="card text-center p-4">
+                    <div class="fs-4xl mb-2">📈</div>
+                    <h3 class="fw-600 fs-base mb-1">Marketing</h3>
+                    <p class="fs-sm text-muted mb-0">543 courses</p>
+                </a>
+                <a href="#" class="card text-center p-4">
+                    <div class="fs-4xl mb-2">🤖</div>
+                    <h3 class="fw-600 fs-base mb-1">Data Science</h3>
+                    <p class="fs-sm text-muted mb-0">432 courses</p>
+                </a>
+                <a href="#" class="card text-center p-4">
+                    <div class="fs-4xl mb-2">📸</div>
+                    <h3 class="fw-600 fs-base mb-1">Photography</h3>
+                    <p class="fs-sm text-muted mb-0">321 courses</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="py-8 bg-surface">
+        <div class="container-lg mx-auto px-4">
+            <div class="flex items-center justify-between mb-5">
+                <div>
+                    <h2 class="fs-3xl fw-700 mb-1">Featured Courses</h2>
+                    <p class="text-muted">Hand-picked courses by our experts</p>
+                </div>
+                <a href="#" class="btn btn-outline d-none d-block-md">View All</a>
+            </div>
+
+            <div class="grid grid-cols-2 grid-cols-md-2 grid-cols-lg-4 gap-5">
+                <!-- Course Card 1 -->
+                <article class="card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" 
+                             alt="Course" 
+                             class="card-media">
+                        <span class="badge bg-warning text-white absolute top-3 left-3">Bestseller</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="badge bg-primary text-white px-2 py-1 mb-2">Development</span>
+                        <h3 class="fw-600 mb-2">
+                            <a href="course.html" class="text-primary">Complete Web Development Bootcamp 2024</a>
+                        </h3>
+                        <p class="fs-sm text-muted mb-3">Master web development from scratch with HTML, CSS, JavaScript, React, and Node.js</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="avatar avatar-sm bg-primary text-white fw-700">JD</div>
+                            <span class="fs-sm text-muted">John Doe</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3 fs-sm">
+                            <span class="text-warning">★★★★★</span>
+                            <span class="fw-600">4.9</span>
+                            <span class="text-muted">(12,543)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="fs-xl fw-700 text-primary">$49.99</span>
+                                <span class="fs-sm text-muted ml-1"><del>$199.99</del></span>
+                            </div>
+                            <span class="badge bg-danger text-white px-2 py-1">75% OFF</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Course Card 2 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop" 
+                         alt="Course" 
+                         class="card-media">
+                    <div class="card-body">
+                        <span class="badge bg-success text-white px-2 py-1 mb-2">Design</span>
+                        <h3 class="fw-600 mb-2">
+                            <a href="course.html" class="text-primary">UI/UX Design Masterclass</a>
+                        </h3>
+                        <p class="fs-sm text-muted mb-3">Learn professional UI/UX design with Figma and create stunning user interfaces</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="avatar avatar-sm bg-success text-white fw-700">SA</div>
+                            <span class="fs-sm text-muted">Sarah Anderson</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3 fs-sm">
+                            <span class="text-warning">★★★★★</span>
+                            <span class="fw-600">4.8</span>
+                            <span class="text-muted">(8,234)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="fs-xl fw-700 text-primary">$39.99</span>
+                            <span class="badge bg-success text-white px-2 py-1">New</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Course Card 3 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" 
+                         alt="Course" 
+                         class="card-media">
+                    <div class="card-body">
+                        <span class="badge bg-info text-white px-2 py-1 mb-2">Data Science</span>
+                        <h3 class="fw-600 mb-2">
+                            <a href="course.html" class="text-primary">Python for Data Science & Machine Learning</a>
+                        </h3>
+                        <p class="fs-sm text-muted mb-3">Master Python, NumPy, Pandas, and machine learning algorithms</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="avatar avatar-sm bg-info text-white fw-700">MJ</div>
+                            <span class="fs-sm text-muted">Mike Johnson</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3 fs-sm">
+                            <span class="text-warning">★★★★★</span>
+                            <span class="fw-600">4.9</span>
+                            <span class="text-muted">(15,678)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="fs-xl fw-700 text-primary">$59.99</span>
+                            <span class="badge bg-warning text-white px-2 py-1">Hot</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Course Card 4 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" 
+                         alt="Course" 
+                         class="card-media">
+                    <div class="card-body">
+                        <span class="badge bg-secondary text-white px-2 py-1 mb-2">Business</span>
+                        <h3 class="fw-600 mb-2">
+                            <a href="course.html" class="text-primary">Digital Marketing Complete Course</a>
+                        </h3>
+                        <p class="fs-sm text-muted mb-3">Learn SEO, social media marketing, email marketing, and analytics</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="avatar avatar-sm bg-secondary text-white fw-700">EW</div>
+                            <span class="fs-sm text-muted">Emily Wilson</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3 fs-sm">
+                            <span class="text-warning">★★★★☆</span>
+                            <span class="fw-600">4.7</span>
+                            <span class="text-muted">(6,789)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="fs-xl fw-700 text-primary">$44.99</span>
+                            <span class="fs-sm text-muted">Updated 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-8">
+        <div class="container-lg mx-auto px-4">
+            <div class="card p-6">
+                <div class="text-center mb-6">
+                    <h2 class="fs-3xl fw-700 mb-2">Trusted by Learners Worldwide</h2>
+                    <p class="text-muted">Join millions of students learning new skills every day</p>
+                </div>
+                <div class="grid grid-cols-4 grid-cols-md-4 gap-6">
+                    <div class="text-center">
+                        <div class="fs-4xl fw-700 text-primary mb-2">50,000+</div>
+                        <div class="text-muted">Active Students</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="fs-4xl fw-700 text-success mb-2">5,000+</div>
+                        <div class="text-muted">Online Courses</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="fs-4xl fw-700 text-info mb-2">200+</div>
+                        <div class="text-muted">Expert Instructors</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="fs-4xl fw-700 text-warning mb-2">95%</div>
+                        <div class="text-muted">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-8 bg-surface">
+        <div class="container-lg mx-auto px-4">
+            <div class="text-center mb-6">
+                <h2 class="fs-3xl fw-700 mb-2">What Our Students Say</h2>
+                <p class="text-muted">Real stories from real learners</p>
+            </div>
+            <div class="grid grid-cols-1 grid-cols-md-3 gap-5">
+                <div class="card p-5">
+                    <div class="text-warning mb-3 fs-lg">★★★★★</div>
+                    <p class="text-muted mb-4">
+                        "The courses are incredibly well-structured and easy to follow. 
+                        I landed my dream job as a web developer thanks to LearnHub!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="avatar bg-primary text-white fw-700">JD</div>
+                        <div>
+                            <div class="fw-600">John Doe</div>
+                            <div class="fs-sm text-muted">Web Developer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-5">
+                    <div class="text-warning mb-3 fs-lg">★★★★★</div>
+                    <p class="text-muted mb-4">
+                        "Amazing platform! The instructors are knowledgeable and the 
+                        content is always up-to-date. Highly recommend!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="avatar bg-success text-white fw-700">SA</div>
+                        <div>
+                            <div class="fw-600">Sarah Anderson</div>
+                            <div class="fs-sm text-muted">UX Designer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-5">
+                    <div class="text-warning mb-3 fs-lg">★★★★★</div>
+                    <p class="text-muted mb-4">
+                        "Best investment I've made in my career. The courses are 
+                        practical and immediately applicable to real-world projects."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="avatar bg-info text-white fw-700">MJ</div>
+                        <div>
+                            <div class="fw-600">Mike Johnson</div>
+                            <div class="fs-sm text-muted">Data Scientist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-8 bg-primary text-white">
+        <div class="container-md mx-auto px-4 text-center">
+            <h2 class="fs-3xl fw-700 mb-3">Start Learning Today</h2>
+            <p class="fs-lg mb-5 opacity-80">
+                Join thousands of students and transform your career with our expert-led courses
+            </p>
+            <div class="flex gap-3 justify-center">
+                <button class="btn btn-secondary btn-lg">Browse Courses</button>
+                <button class="btn btn-outline btn-lg text-white">Become an Instructor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-dark text-white py-8">
+        <div class="container-lg mx-auto px-4">
+            <div class="grid grid-cols-1 grid-cols-md-4 gap-6 mb-6">
+                <div>
+                    <h3 class="fs-xl fw-700 mb-3">LearnHub</h3>
+                    <p class="text-muted fs-sm mb-3">
+                        Empowering learners worldwide with quality education and expert instruction.
+                    </p>
+                    <div class="flex gap-2">
+                        <button class="btn btn-sm btn-ghost">Twitter</button>
+                        <button class="btn btn-sm btn-ghost">LinkedIn</button>
+                        <button class="btn btn-sm btn-ghost">YouTube</button>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="fw-600 mb-3">Learn</h4>
+                    <div class="flex flex-col gap-2">
+                        <a href="#" class="text-muted fs-sm">All Courses</a>
+                        <a href="#" class="text-muted fs-sm">Free Courses</a>
+                        <a href="#" class="text-muted fs-sm">Certificates</a>
+                        <a href="#" class="text-muted fs-sm">Learning Paths</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="fw-600 mb-3">Company</h4>
+                    <div class="flex flex-col gap-2">
+                        <a href="#" class="text-muted fs-sm">About Us</a>
+                        <a href="#" class="text-muted fs-sm">Careers</a>
+                        <a href="#" class="text-muted fs-sm">Blog</a>
+                        <a href="#" class="text-muted fs-sm">Press</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="fw-600 mb-3">Support</h4>
+                    <div class="flex flex-col gap-2">
+                        <a href="#" class="text-muted fs-sm">Help Center</a>
+                        <a href="#" class="text-muted fs-sm">Contact Us</a>
+                        <a href="#" class="text-muted fs-sm">Terms</a>
+                        <a href="#" class="text-muted fs-sm">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top pt-4 text-center">
+                <p class="text-muted fs-sm mb-0">
+                    &copy; 2024 LearnHub. Built with Lightpack CSS
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../dist/lightpack.min.js"></script>
+</body>
+</html>
